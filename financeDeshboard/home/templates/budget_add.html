@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}  Budget add {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+<div class="container">
+    <form  method="POST">
+      <fieldset>
+        <legend>Create Budget</legend>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+</div>
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}   {% endblock javascripts %}
